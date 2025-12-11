@@ -26,6 +26,8 @@ This whole thing is deployed on a kubernetes cluster for robust fault tolerance 
 
 Have a look at the [request handler structure!](https://github.com/Railtrack-Sense/deployment-configs/blob/main/backend_standards.txt)
 
+Also checkout the [environment setup instructions](https://github.com/Railtrack-Sense/deployment-configs/blob/main/kubernetes_env_setup.txt) and the [buildings instructions](https://github.com/Railtrack-Sense/deployment-configs/blob/main/building.txt) but please note that while complete, they were not written with ease of following along in mind!
+
 ### Why so obsessed with performance?
 Each sensing device samples inertial data at above 200Hz (which still far too slow imo). Potentially having multiple devices per train, the amount of data being flung at the backend from across an entire rail network could get pretty huge! Also more performance means less rescources used to accomplish a given task, so its more sustainable too! Yay! :D
 
