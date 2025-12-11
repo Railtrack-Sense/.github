@@ -24,6 +24,8 @@ The backend services depend on [this Cassandra C++ driver wrapper](https://githu
 
 This whole thing is deployed on a kubernetes cluster for robust fault tolerance and ease of deployment / configuration. [See here for the deployment yamls and configs.](https://github.com/Railtrack-Sense/deployment-configs) Featuring: SSL passthrough via nginx ingress for actual, proper, full end to end encryption! Wooo!
 
+Have a look at the [request handler structure!](https://github.com/Railtrack-Sense/deployment-configs/blob/main/backend_standards.txt)
+
 ### Why so obsessed with performance?
 Each sensing device samples inertial data at above 200Hz (which still far too slow imo). Potentially having multiple devices per train, the amount of data being flung at the backend from across an entire rail network could get pretty huge! Also more performance means less rescources used to accomplish a given task, so its more sustainable too! Yay! :D
 
