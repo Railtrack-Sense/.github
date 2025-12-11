@@ -10,7 +10,7 @@ This project was started (after far too much procrastination than I'd like to ad
 It comprises of 3 main parts, the sensing device, the backend and the dashboard / portal thingy.
 
 ## Sensing device:
-ESP32 (lilygo T display - why? Because thats what I had laying around >u<) with an invensense LCM20948 stuck onto it. [Firmare repository here!](https://github.com/Railtrack-Sense/railtrack-sense-fw)
+ESP32 (lilygo T display - why? Because thats what I had laying around >u<) with an invensense LCM20948 stuck onto it. [Firmware repository here!](https://github.com/Railtrack-Sense/railtrack-sense-fw)
 This is ofcourse highly temporarily and is only meant as a proof of concept. In practise, a purpose designed PCB should be used.
 
 ## The backend:
