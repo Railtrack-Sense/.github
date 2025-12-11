@@ -1,13 +1,16 @@
 # Welcome to the Railtrack Sense project!
 
-![Transware](https://pride-badges.pony.workers.dev/static/v1?label=Transware&stripeWidth=8&stripeColors=5BCEFA,F5A9B8,FFFFFF,F5A9B8,5BCEFA)
-![Sponsored by the Gay Agenda](https://pride-badges.pony.workers.dev/static/v1?label=Sponsored+by+the+Gay+Agenda&labelColor=%23555&stripeWidth=8&stripeColors=E40303%2CFF8C00%2CFFED00%2C008026%2C24408E%2C732982)
-
 This project aims to use IoT inertial sensing to monitor the quality of railway lines, enabling easy and automated detection of localised anomalies.
 
 This project was started (after far too much procrastination than I'd like to admit) as a university project _(DE4 Sensing and IoT, Dyson School of Design engineering, Imperial College London, 2025)_.
 
 It comprises of 3 main parts, the sensing device, the backend and the dashboard / portal thingy.
+
+> [!WARNING]
+> **NOTE TO EXAMINER:**
+> 
+> The dashboard portal and asgardeo authentication could not be implemented before the given deadline. I have left it as it was at the time of submission.
+> 
 
 ## Sensing device:
 ESP32 (lilygo T display - why? Because thats what I had laying around >u<) with an invensense LCM20948 stuck onto it. [Firmware repository here!](https://github.com/Railtrack-Sense/railtrack-sense-fw)
@@ -32,4 +35,8 @@ Also checkout the [environment setup instructions](https://github.com/Railtrack-
 Each sensing device samples inertial data at above 200Hz (which still far too slow imo). Potentially having multiple devices per train, the amount of data being flung at the backend from across an entire rail network could get pretty huge! Also more performance means less rescources used to accomplish a given task, so its more sustainable too! Yay! :D
 
 ## The dashboard portal thingy
+
+> [!WARNING]
+> **NOT IMPLEMENTED FULLY YET**
+
 This is where you can look at the gathered data. Oauth authentication using Asgardeo is in progress to ensure the data remains secure. Its just a standard react app using deno, vite and tanstact start (for ssr / ssg). [Here's the repository](https://github.com/Railtrack-Sense/portal-website)
