@@ -14,7 +14,11 @@ This is ofcourse highly temporarily and is only meant as a proof of concept. In 
 
 ## The backend:
 The backend is of a distributed monolith architecture, comprising of two main sub-parts, a REST api written completely in C++ with uWebsockets for maximum performance and an Apache Cassandra cluster (probably should switch to scyllaDB soon for better performance).
+
+The backend services depend on [this Cassandra C++ driver wrapper](https://github.com/MacroMelon/cassandra_cpp_wrapper) that I made to help a bit with the memory saftey of the datastax C++ driver. (Did it help? uhhhhh....)
+
 This whole thing is deployed on a kubernetes cluster for robust fault tolerance and ease of deployment / configuration.
+
 ### Why so obsessed with performance?
 Each sensing device samples inertial data at above 200Hz. Potentially having multiple devices per train, the amount of data being flung at the backend from across an entire rail network could get pretty huge! Also more performance means less rescources used to accomplish a given task, so its more sustainable too! Yay! :D
 
